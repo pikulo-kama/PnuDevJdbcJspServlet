@@ -8,13 +8,6 @@ import lombok.NonNull;
 
 import java.time.LocalDate;
 
-
-enum Gender {
-    Male,
-    Female,
-    Anonymous
-}
-
 @Data
 @Builder(toBuilder = true)
 @AllArgsConstructor
@@ -25,7 +18,7 @@ public class User {
 
     @NonNull private String password;
 
-    private Gender gender;
+    private Boolean enabled;
 
     @NonNull private LocalDate registrationDate;
 }
